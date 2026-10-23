@@ -36,14 +36,13 @@
         }
     </script>
     <style>
-        /* Fixed Background Image across all sections with dark romantic overlay */
+        /* Fixed Background Image optimized for mobile and desktop */
         body {
-            background: linear-gradient(rgba(15, 12, 11, 0.75), rgba(15, 12, 11, 0.85)), url('DSC_6102.JPG') no-repeat center center fixed;
-            background-size:  100%;
-            background-position: center;
-            background-attachment: fixed;
+            background: linear-gradient(rgba(15, 12, 11, 0.78), rgba(15, 12, 11, 0.88)), url('DSC_6102.JPG') no-repeat center center fixed;
+            background-size: cover;
             color: #f7ebe8;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-text-size-adjust: 100%;
         }
 
         /* Custom animations */
@@ -62,9 +61,9 @@
             animation: fadeInScale 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
 
-        /* Glassmorphism card style */
+        /* Glassmorphism card style optimized for touch devices */
         .glass-card {
-            background: rgba(25, 20, 18, 0.65);
+            background: rgba(25, 20, 18, 0.75);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(212, 131, 115, 0.25);
@@ -72,14 +71,14 @@
 
         /* Hide scrollbar for clean look */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 6px;
         }
         ::-webkit-scrollbar-track {
             background: #0f0c0b;
         }
         ::-webkit-scrollbar-thumb {
             background: #bc6351;
-            border-radius: 4px;
+            border-radius: 3px;
         }
     </style>
 </head>
@@ -87,7 +86,7 @@
 
     <!-- Custom Notification Box (Replaces alert) -->
     <div id="custom-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-blur-md p-4">
-        <div class="bg-stone-900 border border-roseGold-500/40 rounded-3xl max-w-md w-full p-8 text-center shadow-2xl transform transition-all scale-95 opacity-0" id="modal-content">
+        <div class="bg-stone-900 border border-roseGold-500/40 rounded-3xl max-w-md w-full p-6 md:p-8 text-center shadow-2xl transform transition-all scale-95 opacity-0" id="modal-content">
             <div class="w-16 h-16 bg-roseGold-900/50 text-roseGold-400 border border-roseGold-500/30 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
                 <i id="modal-icon" class="fa-solid fa-heart"></i>
             </div>
@@ -98,10 +97,10 @@
     </div>
 
     <!-- Navigation Header (Sticky Minimal) -->
-    <nav class="fixed top-0 left-0 right-0 z-40 bg-stone-950/70 backdrop-blur-md border-b border-roseGold-500/20 px-4 py-3 flex items-center justify-between">
-        <a href="#section-1" class="font-script text-2xl md:text-3xl text-roseGold-400 font-bold">Akash & Kalpana</a>
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-stone-950/80 backdrop-blur-md border-b border-roseGold-500/20 px-4 py-3 flex items-center justify-between">
+        <a href="#section-1" class="font-script text-2xl md:text-3xl text-roseGold-400 font-bold truncate max-w-[200px] sm:max-w-none">Akash & Kalpana</a>
         <div class="flex items-center gap-4 text-xs font-medium uppercase tracking-widest">
-            <a href="#section-8" class="bg-roseGold-600 hover:bg-roseGold-500 text-white px-4 py-2 rounded-full shadow-md transition">RSVP</a>
+            <a href="#section-8" class="bg-roseGold-600 hover:bg-roseGold-500 text-white px-4 py-2 rounded-full shadow-md transition shrink-0">RSVP</a>
         </div>
     </nav>
 
@@ -109,34 +108,34 @@
     <main class="relative">
 
         <!-- 1. FIRST SECTION: Minimalist Names with Animation -->
-        <section id="section-1" class="min-h-screen flex flex-col items-center justify-center text-center px-4 relative pt-20">
+        <section id="section-1" class="min-h-[100dvh] flex flex-col items-center justify-center text-center px-4 relative pt-20 pb-12">
             <div class="animate-fade-in max-w-4xl mx-auto space-y-6">
-                <p class="text-roseGold-300 uppercase tracking-[0.4em] text-xs md:text-sm font-semibold">The Royal Wedding Invitation</p>
-                <h1 class="font-script text-7xl md:text-9xl lg:text-[10rem] text-roseGold-100 drop-shadow-2xl leading-tight">Akash <span class="text-roseGold-400 text-5xl md:text-7xl font-serif italic">&</span> Kalpana</h1>
-                <p class="font-serif italic text-xl md:text-3xl text-stone-300 max-w-xl mx-auto">Two souls, one heart, destined for eternity.</p>
+                <p class="text-roseGold-300 uppercase tracking-[0.3em] sm:tracking-[0.4em] text-xs md:text-sm font-semibold">The Royal Wedding Invitation</p>
+                <h1 class="font-script text-6xl sm:text-7xl md:text-9xl lg:text-[10rem] text-roseGold-100 drop-shadow-2xl leading-tight">Akash <span class="text-roseGold-400 text-4xl sm:text-5xl md:text-7xl font-serif italic">&</span> Kalpana</h1>
+                <p class="font-serif italic text-lg sm:text-xl md:text-3xl text-stone-300 max-w-xl mx-auto px-2">Two souls, one heart, destined for eternity.</p>
                 
-                <div class="pt-8">
+                <div class="pt-6 sm:pt-8">
                     <a href="#section-2" class="inline-flex flex-col items-center text-roseGold-300 hover:text-white transition animate-bounce">
                         <span class="text-xs tracking-widest uppercase mb-2">Scroll to Explore</span>
-                        <i class="fa-solid fa-chevron-down text-lg"></i>
+                        <i class="fa-solid fa-chevron-down text-base sm:text-lg"></i>
                     </a>
                 </div>
             </div>
         </section>
 
         <!-- 2. SECOND SECTION: Slogan / Best Thought Line -->
-        <section id="section-2" class="min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 relative">
-            <div class="glass-card max-w-3xl mx-auto p-8 md:p-14 rounded-3xl shadow-2xl animate-fade-in">
+        <section id="section-2" class="min-h-[100dvh] flex flex-col items-center justify-center text-center px-4 py-20 relative">
+            <div class="glass-card max-w-3xl mx-auto p-6 sm:p-8 md:p-14 rounded-3xl shadow-2xl animate-fade-in">
                 <div class="w-12 h-12 rounded-full bg-roseGold-500/20 text-roseGold-400 flex items-center justify-center mx-auto mb-6 text-xl">
                     <i class="fa-solid fa-quote-left"></i>
                 </div>
-                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6 leading-snug">
+                <h2 class="font-serif text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 leading-snug">
                     "True love stories never have endings. They are a lifelong symphony of shared dreams and unconditional devotion."
                 </h2>
-                <p class="text-roseGold-300 font-script text-3xl">Celebrating a bond written in the stars</p>
+                <p class="text-roseGold-300 font-script text-2xl sm:text-3xl">Celebrating a bond written in the stars</p>
             </div>
-            <div class="absolute bottom-8">
-                <a href="#section-3" class="text-roseGold-400 hover:text-white transition text-sm flex items-center gap-2">
+            <div class="absolute bottom-6 sm:bottom-8">
+                <a href="#section-3" class="text-roseGold-400 hover:text-white transition text-xs sm:text-sm flex items-center gap-2">
                     <span>Next: Date & Countdown</span>
                     <i class="fa-solid fa-arrow-down"></i>
                 </a>
@@ -144,37 +143,37 @@
         </section>
 
         <!-- 3. THIRD SECTION: Slogan, Date & Live Countdown -->
-        <section id="section-3" class="min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 relative">
-            <div class="max-w-4xl mx-auto space-y-8 animate-fade-in">
-                <span class="bg-roseGold-500/20 text-roseGold-300 border border-roseGold-500/30 px-6 py-2 rounded-full text-sm font-medium inline-block">
+        <section id="section-3" class="min-h-[100dvh] flex flex-col items-center justify-center text-center px-4 py-20 relative">
+            <div class="max-w-4xl mx-auto space-y-6 sm:space-y-8 animate-fade-in w-full">
+                <span class="bg-roseGold-500/20 text-roseGold-300 border border-roseGold-500/30 px-5 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium inline-block">
                     <i class="fa-solid fa-calendar-days mr-2"></i> 11th December 2026 • Unnao
                 </span>
                 
                 <h2 class="font-serif text-3xl md:text-5xl font-bold text-white">The Countdown Has Begun</h2>
-                <p class="text-stone-300 max-w-lg mx-auto text-sm md:text-base">We are eagerly counting down every single second until we begin our forever journey together.</p>
+                <p class="text-stone-300 max-w-lg mx-auto text-xs sm:text-sm md:text-base px-2">We are eagerly counting down every single second until we begin our forever journey together.</p>
 
                 <!-- Live Countdown Timer Grid -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-xl mx-auto glass-card p-6 rounded-3xl shadow-2xl">
-                    <div class="text-center p-4 bg-white/5 rounded-2xl">
-                        <span id="days" class="block font-serif text-3xl md:text-5xl font-bold text-roseGold-200">20</span>
-                        <span class="text-xs uppercase tracking-widest text-stone-400 mt-1 block">Days</span>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-xl mx-auto glass-card p-4 sm:p-6 rounded-3xl shadow-2xl">
+                    <div class="text-center p-3 sm:p-4 bg-white/5 rounded-2xl">
+                        <span id="days" class="block font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-roseGold-200">20</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-stone-400 mt-1 block">Days</span>
                     </div>
-                    <div class="text-center p-4 bg-white/5 rounded-2xl">
-                        <span id="hours" class="block font-serif text-3xl md:text-5xl font-bold text-roseGold-200">00</span>
-                        <span class="text-xs uppercase tracking-widest text-stone-400 mt-1 block">Hours</span>
+                    <div class="text-center p-3 sm:p-4 bg-white/5 rounded-2xl">
+                        <span id="hours" class="block font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-roseGold-200">00</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-stone-400 mt-1 block">Hours</span>
                     </div>
-                    <div class="text-center p-4 bg-white/5 rounded-2xl">
-                        <span id="minutes" class="block font-serif text-3xl md:text-5xl font-bold text-roseGold-200">00</span>
-                        <span class="text-xs uppercase tracking-widest text-stone-400 mt-1 block">Minutes</span>
+                    <div class="text-center p-3 sm:p-4 bg-white/5 rounded-2xl">
+                        <span id="minutes" class="block font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-roseGold-200">00</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-stone-400 mt-1 block">Minutes</span>
                     </div>
-                    <div class="text-center p-4 bg-white/5 rounded-2xl">
-                        <span id="seconds" class="block font-serif text-3xl md:text-5xl font-bold text-roseGold-200">00</span>
-                        <span class="text-xs uppercase tracking-widest text-stone-400 mt-1 block">Seconds</span>
+                    <div class="text-center p-3 sm:p-4 bg-white/5 rounded-2xl">
+                        <span id="seconds" class="block font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-roseGold-200">00</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-widest text-stone-400 mt-1 block">Seconds</span>
                     </div>
                 </div>
             </div>
-            <div class="absolute bottom-8">
-                <a href="#section-4" class="text-roseGold-400 hover:text-white transition text-sm flex items-center gap-2">
+            <div class="absolute bottom-6 sm:bottom-8">
+                <a href="#section-4" class="text-roseGold-400 hover:text-white transition text-xs sm:text-sm flex items-center gap-2">
                     <span>Next: Photo Gallery</span>
                     <i class="fa-solid fa-arrow-down"></i>
                 </a>
@@ -182,33 +181,33 @@
         </section>
 
         <!-- 4. FOURTH SECTION: Photo Gallery -->
-        <section id="section-4" class="min-h-screen flex flex-col items-center justify-center px-4 py-24 relative">
+        <section id="section-4" class="min-h-[100dvh] flex flex-col items-center justify-center px-4 py-24 relative">
             <div class="max-w-6xl mx-auto w-full">
-                <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
                     <span class="text-roseGold-400 font-semibold uppercase tracking-widest text-xs">Our Memories</span>
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2">Captured Moments</h2>
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2">Captured Moments</h2>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="glass-card rounded-3xl overflow-hidden shadow-2xl h-80 group relative border border-roseGold-500/20">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                    <div class="glass-card rounded-3xl overflow-hidden shadow-2xl h-72 sm:h-80 group relative border border-roseGold-500/20">
                         <img src="04.jpg" alt="Akash and Kalpana 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x800/7c3f33/ffffff?text=Akash+and+Kalpana'">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
                             <p class="text-white font-serif text-lg">Joyful Moments</p>
                         </div>
                     </div>
-                    <div class="glass-card rounded-3xl overflow-hidden shadow-2xl h-80 group relative border border-roseGold-500/20">
+                    <div class="glass-card rounded-3xl overflow-hidden shadow-2xl h-72 sm:h-80 group relative border border-roseGold-500/20">
                         <img src="03.jpg" alt="Akash and Kalpana 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x800/7c3f33/ffffff?text=Akash+and+Kalpana'">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
                             <p class="text-white font-serif text-lg">Together Forever</p>
                         </div>
                     </div>
-                    <div class="glass-card rounded-3xl overflow-hidden shadow-2xl h-80 group relative border border-roseGold-500/20">
+                    <div class="glass-card rounded-3xl overflow-hidden shadow-2xl h-72 sm:h-80 group relative border border-roseGold-500/20">
                         <img src="02.jpg" alt="Akash and Kalpana 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x800/7c3f33/ffffff?text=Akash+and+Kalpana'">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
                             <p class="text-white font-serif text-lg">Magical Evening</p>
                         </div>
                     </div>
-                    <div class="glass-card rounded-3xl overflow-hidden shadow-2xl h-80 group relative border border-roseGold-500/20">
+                    <div class="glass-card rounded-3xl overflow-hidden shadow-2xl h-72 sm:h-80 group relative border border-roseGold-500/20">
                         <img src="01.jpg" alt="Akash and Kalpana 4" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x800/7c3f33/ffffff?text=Akash+and+Kalpana'">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
                             <p class="text-white font-serif text-lg">The Royal Venue</p>
@@ -217,7 +216,7 @@
                 </div>
             </div>
             <div class="absolute bottom-6">
-                <a href="#section-5" class="text-roseGold-400 hover:text-white transition text-sm flex items-center gap-2">
+                <a href="#section-5" class="text-roseGold-400 hover:text-white transition text-xs sm:text-sm flex items-center gap-2">
                     <span>Next: Invitation Message</span>
                     <i class="fa-solid fa-arrow-down"></i>
                 </a>
@@ -225,20 +224,20 @@
         </section>
 
         <!-- 5. FIFTH SECTION: Invitation Message -->
-        <section id="section-5" class="min-h-screen flex flex-col items-center justify-center text-center px-4 py-20 relative">
-            <div class="glass-card max-w-3xl mx-auto p-8 md:p-14 rounded-3xl shadow-2xl">
+        <section id="section-5" class="min-h-[100dvh] flex flex-col items-center justify-center text-center px-4 py-20 relative">
+            <div class="glass-card max-w-3xl mx-auto p-6 sm:p-8 md:p-14 rounded-3xl shadow-2xl">
                 <span class="text-roseGold-400 font-semibold uppercase tracking-widest text-xs">Formal Invitation</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-6">You Are Cordially Invited</h2>
-                <p class="text-roseGold-100 text-base md:text-lg leading-relaxed mb-6">
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2 mb-6">You Are Cordially Invited</h2>
+                <p class="text-roseGold-100 text-sm sm:text-base md:text-lg leading-relaxed mb-6">
                     With the divine blessings of our elders and the warmth of our families, we invite you to grace the sacred wedding ceremony of our beloved brother
                 </p>
-                <p class="font-script text-5xl md:text-6xl text-roseGold-400 my-4">Akash Weds Kalpana</p>
-                <p class="text-stone-300 text-sm md:text-base leading-relaxed">
+                <p class="font-script text-4xl sm:text-5xl md:text-6xl text-roseGold-400 my-4">Akash Weds Kalpana</p>
+                <p class="text-stone-300 text-xs sm:text-sm md:text-base leading-relaxed">
                     Your presence will add immense joy and blessings to our celebrations as we mark this auspicious beginning in Kanpur on December 11, 2026.
                 </p>
             </div>
-            <div class="absolute bottom-8">
-                <a href="#section-6" class="text-roseGold-400 hover:text-white transition text-sm flex items-center gap-2">
+            <div class="absolute bottom-6 sm:bottom-8">
+                <a href="#section-6" class="text-roseGold-400 hover:text-white transition text-xs sm:text-sm flex items-center gap-2">
                     <span>Next: Event Details</span>
                     <i class="fa-solid fa-arrow-down"></i>
                 </a>
@@ -246,23 +245,23 @@
         </section>
 
         <!-- 6. SIXTH SECTION: Event Details (Haldi, Mehandi, Barat, Vidayi) -->
-        <section id="section-6" class="min-h-screen flex flex-col items-center justify-center px-4 py-24 relative">
+        <section id="section-6" class="min-h-[100dvh] flex flex-col items-center justify-center px-4 py-24 relative">
             <div class="max-w-6xl mx-auto w-full">
-                <div class="text-center max-w-2xl mx-auto mb-16">
+                <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
                     <span class="text-roseGold-400 font-semibold uppercase tracking-widest text-xs">Celebration Itinerary</span>
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2">Wedding Events</h2>
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2">Wedding Events</h2>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                     <!-- Event 1: Haldi -->
                     <div class="glass-card rounded-3xl p-6 shadow-xl flex flex-col justify-between border border-roseGold-500/20">
                         <div>
-                            <div class="w-14 h-14 bg-roseGold-500/20 text-roseGold-400 rounded-2xl flex items-center justify-center text-xl mb-6">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-roseGold-500/20 text-roseGold-400 rounded-2xl flex items-center justify-center text-lg sm:text-xl mb-4 sm:mb-6">
                                 <i class="fa-solid fa-sun"></i>
                             </div>
-                            <h3 class="font-serif text-2xl font-bold text-white mb-2">Haldi Ceremony</h3>
-                            <p class="text-roseGold-300 font-medium text-sm mb-4"><i class="fa-regular fa-clock mr-1.5"></i>Dec 10 • 05:00 PM</p>
-                            <p class="text-stone-300 text-sm mb-6">An auspicious ritual filled with turmeric blessings, traditional music, and joyful laughter.</p>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-2">Haldi Ceremony</h3>
+                            <p class="text-roseGold-300 font-medium text-xs sm:text-sm mb-3 sm:mb-4"><i class="fa-regular fa-clock mr-1.5"></i>Dec 10 • 05:00 PM</p>
+                            <p class="text-stone-300 text-xs sm:text-sm mb-6">An auspicious ritual filled with turmeric blessings, traditional music, and joyful laughter.</p>
                         </div>
                         <div class="border-t border-white/10 pt-4 text-xs text-stone-400 flex items-center gap-2">
                             <i class="fa-solid fa-location-dot text-roseGold-400"></i>
@@ -273,12 +272,12 @@
                     <!-- Event 2: Mehandi -->
                     <div class="glass-card rounded-3xl p-6 shadow-xl flex flex-col justify-between border border-roseGold-500/20">
                         <div>
-                            <div class="w-14 h-14 bg-roseGold-500/20 text-roseGold-400 rounded-2xl flex items-center justify-center text-xl mb-6">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-roseGold-500/20 text-roseGold-400 rounded-2xl flex items-center justify-center text-lg sm:text-xl mb-4 sm:mb-6">
                                 <i class="fa-solid fa-hands-bound"></i>
                             </div>
-                            <h3 class="font-serif text-2xl font-bold text-white mb-2">Mehandi Ceremony</h3>
-                            <p class="text-roseGold-300 font-medium text-sm mb-4"><i class="fa-regular fa-clock mr-1.5"></i>Dec 10 • 4:00 PM</p>
-                            <p class="text-stone-300 text-sm mb-6">Intricate henna designs, folk songs, dance, and colorful celebrations with family.</p>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-2">Mehandi Ceremony</h3>
+                            <p class="text-roseGold-300 font-medium text-xs sm:text-sm mb-3 sm:mb-4"><i class="fa-regular fa-clock mr-1.5"></i>Dec 10 • 4:00 PM</p>
+                            <p class="text-stone-300 text-xs sm:text-sm mb-6">Intricate henna designs, folk songs, dance, and colorful celebrations with family.</p>
                         </div>
                         <div class="border-t border-white/10 pt-4 text-xs text-stone-400 flex items-center gap-2">
                             <i class="fa-solid fa-location-dot text-roseGold-400"></i>
@@ -289,12 +288,12 @@
                     <!-- Event 3: Barat -->
                     <div class="glass-card rounded-3xl p-6 shadow-xl flex flex-col justify-between border border-roseGold-500/20">
                         <div>
-                            <div class="w-14 h-14 bg-roseGold-500/20 text-roseGold-400 rounded-2xl flex items-center justify-center text-xl mb-6">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-roseGold-500/20 text-roseGold-400 rounded-2xl flex items-center justify-center text-lg sm:text-xl mb-4 sm:mb-6">
                                 <i class="fa-solid fa-horse-head"></i>
                             </div>
-                            <h3 class="font-serif text-2xl font-bold text-white mb-2">Barat Procession</h3>
-                            <p class="text-roseGold-300 font-medium text-sm mb-4"><i class="fa-regular fa-clock mr-1.5"></i>Dec 11 • 5:00 PM</p>
-                            <p class="text-stone-300 text-sm mb-6">The grand groom's wedding procession with music, dancing, and celebratory fireworks.</p>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-2">Barat Procession</h3>
+                            <p class="text-roseGold-300 font-medium text-xs sm:text-sm mb-3 sm:mb-4"><i class="fa-regular fa-clock mr-1.5"></i>Dec 11 • 5:00 PM</p>
+                            <p class="text-stone-300 text-xs sm:text-sm mb-6">The grand groom's wedding procession with music, dancing, and celebratory fireworks.</p>
                         </div>
                         <div class="border-t border-white/10 pt-4 text-xs text-stone-400 flex items-center gap-2">
                             <i class="fa-solid fa-location-dot text-roseGold-400"></i>
@@ -305,12 +304,12 @@
                     <!-- Event 4: Vidayi -->
                     <div class="glass-card rounded-3xl p-6 shadow-xl flex flex-col justify-between border border-roseGold-500/20">
                         <div>
-                            <div class="w-14 h-14 bg-roseGold-500/20 text-roseGold-400 rounded-2xl flex items-center justify-center text-xl mb-6">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 bg-roseGold-500/20 text-roseGold-400 rounded-2xl flex items-center justify-center text-lg sm:text-xl mb-4 sm:mb-6">
                                 <i class="fa-solid fa-dove"></i>
                             </div>
-                            <h3 class="font-serif text-2xl font-bold text-white mb-2">Vidayi Ceremony</h3>
-                            <p class="text-roseGold-300 font-medium text-sm mb-4"><i class="fa-regular fa-clock mr-1.5"></i>Dec 12 • Morning</p>
-                            <p class="text-stone-300 text-sm mb-6">The emotional farewell ceremony as the bride begins her new journey with Akash.</p>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-white mb-2">Vidayi Ceremony</h3>
+                            <p class="text-roseGold-300 font-medium text-xs sm:text-sm mb-3 sm:mb-4"><i class="fa-regular fa-clock mr-1.5"></i>Dec 12 • Morning</p>
+                            <p class="text-stone-300 text-xs sm:text-sm mb-6">The emotional farewell ceremony as the bride begins her new journey with Akash.</p>
                         </div>
                         <div class="border-t border-white/10 pt-4 text-xs text-stone-400 flex items-center gap-2">
                             <i class="fa-solid fa-location-dot text-roseGold-400"></i>
@@ -320,7 +319,7 @@
                 </div>
             </div>
             <div class="absolute bottom-6">
-                <a href="#section-7" class="text-roseGold-400 hover:text-white transition text-sm flex items-center gap-2">
+                <a href="#section-7" class="text-roseGold-400 hover:text-white transition text-xs sm:text-sm flex items-center gap-2">
                     <span>Next: Venue & Map</span>
                     <i class="fa-solid fa-arrow-down"></i>
                 </a>
@@ -328,17 +327,17 @@
         </section>
 
         <!-- 7. SEVENTH SECTION: Venue & Google Maps -->
-        <section id="section-7" class="min-h-screen flex flex-col items-center justify-center px-4 py-24 relative">
+        <section id="section-7" class="min-h-[100dvh] flex flex-col items-center justify-center px-4 py-24 relative">
             <div class="max-w-5xl mx-auto w-full">
-                <div class="text-center max-w-2xl mx-auto mb-12">
+                <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
                     <span class="text-roseGold-400 font-semibold uppercase tracking-widest text-xs">Destination</span>
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2">Venue & Location</h2>
+                    <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2">Venue & Location</h2>
                 </div>
 
-                <div class="glass-card rounded-3xl p-8 md:p-12 shadow-2xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center border border-roseGold-500/20">
+                <div class="glass-card rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center border border-roseGold-500/20">
                     <div>
-                        <h3 class="font-serif text-3xl font-bold text-white mb-4">Luxury Wedding Lawns</h3>
-                        <p class="text-stone-300 mb-6 leading-relaxed">
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4">Luxury Wedding Lawns</h3>
+                        <p class="text-stone-300 mb-6 text-sm sm:text-base leading-relaxed">
                             All main ceremonies and wedding festivities will take place in Kanpur, Uttar Pradesh. Ample parking and hospitality arrangements are available.
                         </p>
                         <div class="space-y-4">
@@ -347,19 +346,19 @@
                                     <i class="fa-solid fa-hotel"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-white">Grand Palace & Lawns</h4>
-                                    <p class="text-stone-300 text-sm">Kanpur, Uttar Pradesh, 208001</p>
+                                    <h4 class="font-bold text-white text-sm sm:text-base">Grand Palace & Lawns</h4>
+                                    <p class="text-stone-300 text-xs sm:text-sm">Kanpur, Uttar Pradesh, 208001</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="h-[320px] rounded-2xl overflow-hidden shadow-inner border border-white/20">
+                    <div class="h-[280px] sm:h-[320px] rounded-2xl overflow-hidden shadow-inner border border-white/20">
                         <iframe title="Kanpur Map" class="w-full h-full border-0 filter invert contrast-125" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14287.478953163158!2d80.3318736!3d26.449923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4770b13cf117%3A0x8d438933b4972e27!2sKanpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
             <div class="absolute bottom-6">
-                <a href="#section-8" class="text-roseGold-400 hover:text-white transition text-sm flex items-center gap-2">
+                <a href="#section-8" class="text-roseGold-400 hover:text-white transition text-xs sm:text-sm flex items-center gap-2">
                     <span>Next: RSVP Form</span>
                     <i class="fa-solid fa-arrow-down"></i>
                 </a>
@@ -367,29 +366,29 @@
         </section>
 
         <!-- 8. EIGHTH SECTION: RSVP Form -->
-        <section id="section-8" class="min-h-screen flex flex-col items-center justify-center px-4 py-24 relative">
+        <section id="section-8" class="min-h-[100dvh] flex flex-col items-center justify-center px-4 py-24 relative">
             <div class="max-w-2xl mx-auto w-full text-center">
                 <span class="text-roseGold-400 font-semibold uppercase tracking-widest text-xs">Be Our Guest</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Are You Attending?</h2>
-                <p class="text-stone-300 mb-10 text-sm md:text-base">Please submit your RSVP response so we can prepare for your gracious presence.</p>
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-2 mb-4">Are You Attending?</h2>
+                <p class="text-stone-300 mb-8 sm:mb-10 text-xs sm:text-sm md:text-base px-2">Please submit your RSVP response so we can prepare for your gracious presence.</p>
 
-                <form id="rsvp-form" onsubmit="handleRSVP(event)" class="glass-card p-8 md:p-10 rounded-3xl text-left space-y-6 shadow-2xl border border-roseGold-500/20">
+                <form id="rsvp-form" onsubmit="handleRSVP(event)" class="glass-card p-6 sm:p-8 md:p-10 rounded-3xl text-left space-y-5 sm:space-y-6 shadow-2xl border border-roseGold-500/20">
                     <div>
-                        <label class="block text-sm font-medium text-stone-200 mb-2">Full Name *</label>
-                        <input type="text" id="guest-name" required class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-stone-400 focus:outline-none focus:border-roseGold-400 transition" placeholder="Enter your full name">
+                        <label class="block text-xs sm:text-sm font-medium text-stone-200 mb-2">Full Name *</label>
+                        <input type="text" id="guest-name" required class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-sm sm:text-base text-white placeholder-stone-400 focus:outline-none focus:border-roseGold-400 transition" placeholder="Enter your full name">
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                         <div>
-                            <label class="block text-sm font-medium text-stone-200 mb-2">Will you attend? *</label>
-                            <select id="attendance" class="w-full bg-stone-900 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-roseGold-400 transition">
+                            <label class="block text-xs sm:text-sm font-medium text-stone-200 mb-2">Will you attend? *</label>
+                            <select id="attendance" class="w-full bg-stone-900 border border-white/20 rounded-xl px-4 py-3 text-sm sm:text-base text-white focus:outline-none focus:border-roseGold-400 transition">
                                 <option value="Joyfully Accept">Joyfully Accept</option>
                                 <option value="Regretfully Decline">Regretfully Decline</option>
                             </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-stone-200 mb-2">Number of Guests</label>
-                            <select id="guest-count" class="w-full bg-stone-900 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-roseGold-400 transition">
+                            <label class="block text-xs sm:text-sm font-medium text-stone-200 mb-2">Number of Guests</label>
+                            <select id="guest-count" class="w-full bg-stone-900 border border-white/20 rounded-xl px-4 py-3 text-sm sm:text-base text-white focus:outline-none focus:border-roseGold-400 transition">
                                 <option value="1">1 Person</option>
                                 <option value="2">2 Persons</option>
                                 <option value="3">3 Persons</option>
@@ -399,17 +398,17 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-stone-200 mb-2">Wishes for Akash & Kalpana</label>
-                        <textarea id="guest-message" rows="3" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-stone-400 focus:outline-none focus:border-roseGold-400 transition" placeholder="Write your warm wishes here..."></textarea>
+                        <label class="block text-xs sm:text-sm font-medium text-stone-200 mb-2">Wishes for Akash & Kalpana</label>
+                        <textarea id="guest-message" rows="3" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-sm sm:text-base text-white placeholder-stone-400 focus:outline-none focus:border-roseGold-400 transition" placeholder="Write your warm wishes here..."></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-roseGold-600 hover:bg-roseGold-500 text-white font-semibold py-4 rounded-xl transition shadow-lg shadow-roseGold-600/30">
+                    <button type="submit" class="w-full bg-roseGold-600 hover:bg-roseGold-500 text-white font-semibold py-3.5 sm:py-4 rounded-xl transition shadow-lg shadow-roseGold-600/30 text-sm sm:text-base">
                         Send RSVP Response
                     </button>
                 </form>
             </div>
             <div class="absolute bottom-6">
-                <a href="#section-9" class="text-roseGold-400 hover:text-white transition text-sm flex items-center gap-2">
+                <a href="#section-9" class="text-roseGold-400 hover:text-white transition text-xs sm:text-sm flex items-center gap-2">
                     <span>Next: Thanking Note</span>
                     <i class="fa-solid fa-arrow-down"></i>
                 </a>
@@ -417,18 +416,18 @@
         </section>
 
         <!-- 9. NINTH SECTION: Thanking / Footer -->
-        <section id="section-9" class="min-h-screen flex flex-col items-center justify-center text-center px-4 py-24 relative">
-            <div class="glass-card max-w-3xl mx-auto p-12 rounded-3xl shadow-2xl space-y-6">
+        <section id="section-9" class="min-h-[100dvh] flex flex-col items-center justify-center text-center px-4 py-24 relative">
+            <div class="glass-card max-w-3xl mx-auto p-8 sm:p-12 rounded-3xl shadow-2xl space-y-6">
                 <div class="w-16 h-16 rounded-full bg-roseGold-500/20 text-roseGold-400 flex items-center justify-center mx-auto text-2xl">
                     <i class="fa-solid fa-heart"></i>
                 </div>
                 <span class="text-roseGold-400 font-semibold uppercase tracking-widest text-xs">With Gratitude</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white">Thank You</h2>
-                <p class="text-stone-300 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
+                <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white">Thank You</h2>
+                <p class="text-stone-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto px-2">
                     Your love, blessings, and presence mean the world to Akash & Kalpana as they start this miraculous journey. We look forward to celebrating with you in Kanpur!
                 </p>
-                <div class="pt-6">
-                    <p class="font-script text-6xl text-roseGold-300">Akash & Kalpana</p>
+                <div class="pt-4 sm:pt-6">
+                    <p class="font-script text-5xl sm:text-6xl text-roseGold-300">Akash & Kalpana</p>
                     <p class="text-xs uppercase tracking-[0.3em] text-stone-400 mt-4">11th December 2026 • Kanpur</p>
                 </div>
             </div>
